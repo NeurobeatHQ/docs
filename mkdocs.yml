@@ -26,6 +26,8 @@ markdown_extensions:
   - admonition
   - pymdownx.details
   - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
   - pymdownx.highlight
   - pymdownx.inlinehilite
   - toc:
@@ -33,3 +35,5 @@ markdown_extensions:
 
 nav:
   - Home: index.md
+  - Zero:
+      - Getting Started: zero/getting-started.md
