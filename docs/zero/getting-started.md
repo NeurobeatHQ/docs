@@ -2,70 +2,30 @@
 
 Get up and running with **Zero** in a few minutes.
 
-## Prerequisites
+![Neurobeat Zero Bundle — what's in the box](img/inside-the-box.jpg)
 
-- Python 3.10+ (or Node.js 18+ if you use the JS client)
-- An API key from your [Neurobeat dashboard](https://docs.neurobeat.com)
+## What's Neurobeat Zero
 
-## Install
+Neurobeat Zero is a research-grade biopotential board small enough to go anywhere: Arduino-programmable, and streaming straight into the tools you already use, like BrainFlow and EEGLAB. No PC required. No USB to contaminate the signal. Deploy any app from the App Store in one click, encrypted end to end.
 
-=== "Python"
+Two USB items ship in this box, and neither connects to the Neurobeat Zero: the charger cable charges the battery, and the Neurobeat Loop's cable connects the Neurobeat Loop to your computer.
 
-    ```bash
-    pip install neurobeat-zero
-    ```
+## Assemble
 
-=== "JavaScript"
+### 1 · Charge the battery
 
-    ```bash
-    npm install @neurobeat/zero
-    ```
+Plug the battery into the USB charger and connect it to any USB power source. Leave it until the charger's indicator shows a full charge. Carry on assembling while it charges.
 
-## Configure
+### 2 · Fit the electrodes
 
-Set your API key as an environment variable:
+1. **Electrode breakout** → the angled header on the edge of the board. It only fits one way round, and it seats fully — press until it stops.
+2. **Ear clips** → the sockets marked for bias and reference. These are your ground and your comparison point; without them you have no signal at all.
+3. **Gold cups** → the remaining channel sockets. These are your recording sites.
 
-```bash
-export NEUROBEAT_API_KEY="your-api-key-here"
-```
+### 3 · Connect the battery
 
-!!! warning
-    Never commit your API key to version control. Use environment variables or a secrets manager.
+**Battery** → the battery-adapter cable → the white JST plug on the Neurobeat Zero, and it will start as soon as the battery is connected. *Note: There's no power switch. Your device will enter standby mode automatically after 5 minutes of inactivity. Press the "Reset" button to wake it up.*
 
-## Your first request
+Your board is assembled!
 
-=== "Python"
-
-    ```python
-    from neurobeat import Zero
-
-    client = Zero()  # reads NEUROBEAT_API_KEY from the environment
-
-    response = client.run(
-        task="hello-world",
-        input={"message": "Hello, Zero!"},
-    )
-
-    print(response.output)
-    ```
-
-=== "JavaScript"
-
-    ```javascript
-    import { Zero } from "@neurobeat/zero";
-
-    const client = new Zero(); // reads NEUROBEAT_API_KEY from the environment
-
-    const response = await client.run({
-      task: "hello-world",
-      input: { message: "Hello, Zero!" },
-    });
-
-    console.log(response.output);
-    ```
-
-## Next steps
-
-- Explore the [API reference](https://docs.neurobeat.com)
-- Learn about [authentication and API keys](https://docs.neurobeat.com)
-- Browse [example projects](https://docs.neurobeat.com)
+[See how to get started, join your network, install apps, and take your first recording →](getting-started.md)
