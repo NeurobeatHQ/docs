@@ -36,5 +36,6 @@ markdown_extensions:
 nav:
   - Home: index.md
   - Zero:
-      - Inside the Box: zero/1-inside-the-box.md
       - Getting Started: zero/getting-started.md
+  - Loop:
+      - Getting Started: loop/getting-started.md
