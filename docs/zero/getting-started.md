@@ -1,6 +1,6 @@
-# Getting Started
+# Getting Started with Neurobeat Zero
 
-Get up and running with **Zero** in a few minutes.
+Get up and running with Neurobeat Zero in a few minutes.
 
 ![Neurobeat Zero Bundle — what's in the box](img/inside-the-box.jpg)
 
